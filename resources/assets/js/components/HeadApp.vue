@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div>
         <div class="float-right fixed-top-app">
             <button @click="handleApp('Favorite')" type="button" class="btn btn-outline-primary top-nav" v-b-tooltip.hover title="Favorite Cars"><i class="material-icons">star_border</i></button>
             <button @click="handleApp('Recent')" type="button" class="btn btn-outline-primary top-nav" v-b-tooltip.hover title="Recent Cars"><i class="material-icons">history</i></button>
@@ -27,7 +27,7 @@
                 </form> 
             </div>
         </div>
-        <div v-if="!auth" class="text-sceondary col-12 col-md-8 col-lg-6 mx-auto">
+        <div v-else class="text-sceondary col-12 col-md-8 col-lg-6 mx-auto">
             <div class="text-center  rounded mt-2 bg-warning" role="alert">
                 <h4 class="font-weight-bold">Please login to access this features</h4>
                 <hr>
@@ -115,7 +115,7 @@ export default{
     props:['auth','name'],   
     data(){
         return{
-            showModal:false,
+            showModal:false,            
             title:'',
             request:'',
             deployApp:false,
@@ -129,7 +129,7 @@ export default{
     methods:{
         handleApp(request){
             this.request=request;  
-            if(!auth){
+            if(!this.auth){
                 if(request == 'login'){
                     this.showModal=true;
                     this.title='Login into Carbe';                
@@ -179,7 +179,6 @@ export default{
         authenticated(auth,name){
             if(auth){
                 this.showModal=false;
-                this.showLogin=false;
             }
         }
     },

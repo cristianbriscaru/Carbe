@@ -62,7 +62,7 @@ class AdvertController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreAdvert $request, SubscriptionRepository $subscriptions)
-    {
+    {   dd($request);
         $this->authorize('store', Advert::class);
         $modelId=Models::where('model_name',request('model'))->join('makes', function($join){ 
                 $join->on('models.make_id','=','makes.id')->where('make_name','=', request('make')); 

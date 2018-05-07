@@ -3,7 +3,7 @@
 Create Car Advert
 @endsection
 @section('content')
-<nav aria-label="breadcrumb" class="float-left">
+<nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Sell</li>
@@ -11,7 +11,7 @@ Create Car Advert
 </nav>
 <div class="container">
     @if( !auth()->user()->adverts()->exists() )
-    <div class="row justify-content-center text-center mx-lg-5 pt-md-5"> 
+    <div class="row justify-content-center text-center mx-lg-5"> 
         <div class="col stepper ">
             <div class="d-inline-flex first-step small-i">
                 <p class="stepper text-success"><i class="material-icons border border-success rounded-circle p-2 mr-2">done</i>User Profile</p>

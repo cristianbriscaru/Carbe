@@ -38,11 +38,7 @@ var vm = new Vue({
     },
     created:function (){
         
-    }
+    }    
     
 });
 
-
-
-//console.log(window.old);
-//console.log(window.errors.postcode[0]);

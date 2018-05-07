@@ -58,9 +58,9 @@ Help
                                         <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
-                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.user-account-create>Create Account</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.user-account-view>View Account</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.user-account-delete>Delete Account</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.user-account-create>Create</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.user-account-view>View</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.user-account-delete>Delete</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="user-account-create" visible accordion="user-account" role="tabpanel">
@@ -130,9 +130,9 @@ Help
                                         <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
-                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.seller-account-create>Create Account</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.seller-account-view>View Account</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.seller-account-delete>Delete Account</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.seller-account-create>Create</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.seller-account-view>View</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.seller-account-delete>Delete</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="seller-account-create" visible accordion="seller-account" role="tabpanel">
@@ -195,9 +195,9 @@ Help
                                         <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
-                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.adverts-create>Create Advert</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.adverts-view>View Adverts</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.adverts-delete>Delete Advert</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.adverts-create>Create</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.adverts-view>View</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.adverts-delete>Delete</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="adverts-create" visible accordion="adverts" role="tabpanel">
@@ -264,8 +264,8 @@ Help
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
                                                 <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.search-create>Search</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.search-view>Save Search</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-success w-100" v-b-toggle.search-delete>View Searches</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.search-view>Save</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-success w-100" v-b-toggle.search-delete>View</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="search-create" visible accordion="search" role="tabpanel">
@@ -327,9 +327,9 @@ Help
                                         <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
-                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.favorite-cars-create>Save Favorite</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.favorite-cars-view>View Favorites</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.favorite-cars-delete>Delete Account</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.favorite-cars-create>Save</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.favorite-cars-view>View</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.favorite-cars-delete>Delete</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="favorite-cars-create" visible accordion="favorite-cars" role="tabpanel">
@@ -415,9 +415,9 @@ Help
                                         <b-card no-body class="mb-1">
                                         <b-card-header header-tag="header" class="p-1 bg-white border-bottom-0" role="tab">
                                             <ul class="share-icon my-3">
-                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.subscriptions-create>Save Subscription</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.subscriptions-view>View Subscriptions</button></li>
-                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.subscriptions-delete>Delete Subscription</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-primary w-100" v-b-toggle.subscriptions-create>Save</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-info w-100" v-b-toggle.subscriptions-view>View</button></li>
+                                                <li class="w-30"><button type="button" class="btn btn-danger w-100" v-b-toggle.subscriptions-delete>Delete</button></li>
                                             </ul>
                                         </b-card-header>
                                         <b-collapse id="subscriptions-create" visible accordion="subscriptions" role="tabpanel">

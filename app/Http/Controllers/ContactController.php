@@ -15,7 +15,7 @@ class ContactController extends Controller
             'email'=>'required|email',
             'telephone'=>'numeric',
             'message'=>'required|string',
-            //'name'=>'string'
+            'name'=>'string'
         ]);
         Contact::create($validated);
         

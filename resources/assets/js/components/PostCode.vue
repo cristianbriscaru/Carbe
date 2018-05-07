@@ -57,7 +57,7 @@ export default {
     },
     watch:{
         postcode: function(postcode){
-            this.postcode=postcode.toUpperCase();
+            this.postcode=this.postcode.toUpperCase();
             setTimeout(()=>{   
                 this.getPostcode(this.postcode);
             },500);
@@ -77,21 +77,21 @@ export default {
                     this.prevPostcode=this.postcode;
                     axios.get("https://api.postcodes.io/postcodes/" + value).then(response  =>  {
                         this.setLocation(response.data);     
-                }) 
-                .catch(error => {
+                    }) 
+                    .catch(error => {
                         if(error.response.data.status == 404){
                             this.$validator.errors.add('postcode','Invalid Postcode','postcode.io');
                         }
                         else{
-                    this.$validator.errors.add('postcode','Service unaviable. Try again later','postcode.io');     
+                            this.$validator.errors.add('postcode','Service unaviable. Try again later','postcode.io');   
                         }
                         
                         
-                });
+                    });
                 }
                 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
                 window.axios.defaults.headers.common['X-CSRF-TOKEN']=document.head.querySelector('meta[name="csrf-token"]').content;            
-        },
+        }, 
         setLocation (location){
                 if(location.status==200){  
                     this.lat=location.result.latitude;

@@ -141,7 +141,7 @@ ul.menu li:not(:first-child):before {
   font-size:1.75rem;
 }
 
-.menu a:visited , a.footers:visited{
+.menu a:visited , .footers a:visited{
   color:#c5c9cc;
 }
 a:hover{
@@ -180,6 +180,9 @@ div.arrow::before{
 footer {
   background-color:  #027be3;
   color:white; 
+}
+.footers a{
+  color:white;
 }
 label.custom-input,legend.custom-input,span.custom-input{
   color:#979797;

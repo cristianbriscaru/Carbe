@@ -2,7 +2,7 @@
 @section('content')
 
 <h2 class="text-center text-secondary my-5" >Looks like something went wrong.....</h2>
-<h3 class="text-center text-faded">{{ $exception->getMessage() }}</h3>
+
 <img  src="{{asset('media/app/error.png')}}" alt="Error" width="400" height="300" class="mx-auto d-block">
 <div class="w-100 row mx-auto my-5 justify-content-center ">
     <div class="col-6 text-right">

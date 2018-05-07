@@ -1,14 +1,14 @@
 <footer class="text-center mt-5">
     <nav class="pt-3">
         <ul class="footers list-inline">
-                <li class="list-inline-item"> <a href="{{route('advert.index')}}"  class=" footers">Adverts </a></li>
-                <li class="list-inline-item"> <a href="{{route('favorite.index')}}"  class=" footers">Favorites  </a></li>
-                <li class="list-inline-item"> <a href="{{route('recent.index')}}"  class=" footers">Recents </a></li>
-                <li class="list-inline-item"> <a href="{{route('search.index')}}"  class=" footers">Searches </a></li>
-                <li class="list-inline-item"> <a href="{{route('subscription.index')}}"  class=" footers">Subscriptions </a></li>
-                <li class="list-inline-item"> <a href="{{route('help')}}"  class=" footers ">Help </a></li>
-                <li class="list-inline-item"> <a href="{{route('about')}}"  class=" footers ">About Us </a></li>   
-                <li class="list-inline-item"> <a href="{{route('contact.create')}}"  class=" footers ">Contact Us </a></li>          
+                <li class="list-inline-item footers"> <a href="{{route('advert.index')}}"  class=" footers">Adverts </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('favorite.index')}}"  class=" footers">Favorites  </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('recent.index')}}"  class=" footers">Recents </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('search.index')}}"  class=" footers">Searches </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('subscription.index')}}"  class=" footers">Subscriptions </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('help')}}"  class=" footers ">Help </a></li>
+                <li class="list-inline-item footers"> <a href="{{route('about')}}"  class=" footers ">About Us </a></li>   
+                <li class="list-inline-item footers"> <a href="{{route('contact.create')}}"  class=" footers ">Contact Us </a></li>          
         </ul>
     </nav>
 

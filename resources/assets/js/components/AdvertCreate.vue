@@ -11,8 +11,8 @@
                 <input id="regplate" type="text" class="text-uppercase form-control custom-input w-50 mx-auto" v-bind:class="{'invalid' : errors.has('regplate')}" v-model="vrm"  placeholder="VRM :" data-vv-name="registrationplate" v-validate="{regex:/^[a-zA-Z-0-9]{6,7}$/}" >
                 <small v-if="errors.has('regplate')" class="form-text invalid">{{ errors.first('regplate') }}</small>
             </div>        
-            <div class="col ">
-                <button type="button" class="btn btn-info btn-lg " id="lookup" @click="vehicleLookup()">Vehicle Lookup</button>
+            <div class="col">
+                <button type="button" class="btn btn-info btn-lg mt-5 mt-md-4" id="lookup" @click="vehicleLookup()">Vehicle Lookup</button>
                 <small v-if="errors.has('vehiclelookup')" class="form-text invalid">{{ errors.first('vehiclelookup') }}</small>
             </div>        
         </div>
@@ -260,7 +260,7 @@
                     <small v-if="errors.has('doors')" class="form-text invalid">{{ errors.first('doors') }}</small>
                 </div>                       
             </div>
-            </div>
+            </div>             
             <div class="w-100 bg-light rounded my-2">
                 <button type="button" class="btn btn-info w-25" @click="showFeatures = !showFeatures">Extra Features</button>
             </div>            
@@ -269,19 +269,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="1" id="sunroof">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="1" id="sunroof">
                             <label class="form-check-label ml-2 py-2" for="sunroof">Sunroof</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="2" id="alarm">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="2" id="alarm">
                             <label class="form-check-label pl-2 py-2" for="alarm">Alarm</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="3" id="satnav">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="3" id="satnav">
                             <label class="form-check-label pl-2 py-2" for="satnav">Sat Nav</label>
                         </div>
                     </div>                                          
@@ -289,19 +289,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="4" id="cd-player">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="4" id="cd-player">
                             <label class="form-check-label pl-2 py-2" for="cd-player">CD Player</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="5" id="dvd-player">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="5" id="dvd-player">
                             <label class="form-check-label pl-2 py-2" for="dvd-player">DVD Player</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="6" id="leather">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="6" id="leather">
                             <label class="form-check-label pl-2 py-2" for="leather">Leather Trim</label>
                         </div>
                     </div>                                          
@@ -309,19 +309,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="7" id="roof-rails">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="7" id="roof-rails">
                             <label class="form-check-label pl-2 py-2" for="roof-rails">Roof Rails</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="8" id="folding-seats">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="8" id="folding-seats">
                             <label class="form-check-label pl-2 py-2" for="folding-seats">Folding Seats</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="9" id="sport-seats">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="9" id="sport-seats">
                             <label class="form-check-label pl-2 py-2" for="sport-seats">Sport Seats</label>
                         </div>
                     </div>                                          
@@ -329,19 +329,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="10" id="spare-wheel">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="10" id="spare-wheel">
                             <label class="form-check-label pl-2 py-2" for="spare-wheel">Spare Wheel</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="11" id="immobiliser">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="11" id="immobiliser">
                             <label class="form-check-label pl-2 py-2" for="imobiliser">Immobiliser</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="12" id="airbags">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="12" id="airbags">
                             <label class="form-check-label pl-2 py-2" for="airbags">Airbags</label>
                         </div>
                     </div>                                          
@@ -349,19 +349,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="13" id="air-conditioning">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="13" id="air-conditioning">
                             <label class="form-check-label pl-2 py-2" for="air-conditioning">AC</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="14" id="parking-aid">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="14" id="parking-aid">
                             <label class="form-check-label pl-2 py-2" for="parking-aid">Parking Aid</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="15" id="mp3-player">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="15" id="mp3-player">
                             <label class="form-check-label pl-2 py-2" for="mp3-player">MP3 Player</label>
                         </div>
                     </div>                                          
@@ -369,19 +369,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="16" id="bluetooth">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="16" id="bluetooth">
                             <label class="form-check-label pl-2 py-2" for="bluetooth">Bluetooth</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="17" id="heated-seats">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="17" id="heated-seats">
                             <label class="form-check-label pl-2 py-2" for="heated-seats">Heated Seats</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="18" id="isofix">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="18" id="isofix">
                             <label class="form-check-label pl-2 py-2" for="isofix">Isofix System</label>
                         </div>
                     </div>                                          
@@ -389,19 +389,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="19" id="metalic-paint">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="19" id="metalic-paint">
                             <label class="form-check-label pl-2 py-2" for="metalic-paint">Metalic Paint</label>
                         </div>
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="20" id="alloy-weels">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="20" id="alloy-weels">
                             <label class="form-check-label pl-2 py-2" for="alloy-wheels">Alloy Wheels</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="21" id="cruise-control">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="21" id="cruise-control">
                             <label class="form-check-label  py-2" for="cruise-control">Cruise Control</label>
                         </div>
                     </div>                                          
@@ -409,19 +409,19 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="22" id="central-locking">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="22" id="central-locking">
                             <label class="form-check-label pl-2 py-2" for="central-locking">Central Locking</label>
                         </div>
                     </div>                           
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="23" id="power-steering">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="23" id="power-steering">
                             <label class="form-check-label pl-2 py-2" for="power-steering">Power Steering</label>
                         </div>
                     </div> 
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="24" id="traction-control">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="24" id="traction-control">
                             <label class="form-check-label pl-2 py-2" for="traction-control">Traction Control</label>
                         </div>
                     </div>                                          
@@ -429,20 +429,20 @@
                 <div class="form-group row custom-input">
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="25" id="adjustable-seats">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="25" id="adjustable-seats">
                             <label class="form-check-label pl-2 py-2" for="adjustable-seats">Adjustable Seats</label>
                         </div>
                     </div>                     
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="26" id="electric-windows">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="26" id="electric-windows">
                             <label class="form-check-label pl-2 py-2" for="electric-windows">Electric Windows</label>
                         </div>
                     </div>                          
  
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-3" type="checkbox" name="features[]" v-model="features" value="27" id="voice-command">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="27" id="voice-command">
                             <label class="form-check-label pl-2 py-2" for="voice-command">Voice Command</label>
                         </div>
                     </div>                                          
