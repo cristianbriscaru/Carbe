@@ -57,7 +57,7 @@ export default {
     },
     watch:{
         postcode: function(postcode){
-            this.postcode=this.postcode.toUpperCase();
+            
             setTimeout(()=>{   
                 this.getPostcode(this.postcode);
             },500);

@@ -178,6 +178,7 @@ export default{
         },
         authenticated(auth,name){
             if(auth){
+                this.deployApp=false;
                 this.showModal=false;
             }
         }
