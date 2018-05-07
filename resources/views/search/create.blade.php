@@ -20,6 +20,6 @@ Search Cars to Buy
         window.old=@json(  count(old()) || $searchQuery == null ? old() : $searchQuery );
         window.errors=@json($errors->toArray());
         window.makes=@json($makes);
-        console.log(window.old);
+        
     </script>
 @endpush

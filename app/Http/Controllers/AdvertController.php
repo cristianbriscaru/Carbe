@@ -13,6 +13,8 @@ use App\Make;
 use App\Repositories\SubscriptionRepository;
 use App\Http\Requests\UpdateAdvert;
 use App\Repositories\RecentRepository;
+use Mail;
+
 class AdvertController extends Controller
 {
 
@@ -114,6 +116,8 @@ class AdvertController extends Controller
             }
         } 
         $subscriptions->subscribable($advert);
+        $user=auth()->user();
+        Mail::to($user)->send(new \App\Mail\AdvertCreated($user,$advert));
         $alert=['variant' => 'success' , 'title' => 'Car Advert Created' , 'message' => 'Your Car Advert has been successfuly created and is now ready to be seen by buyers '];
         return back()->with('alert',$alert);
         

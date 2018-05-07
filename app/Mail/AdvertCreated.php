@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class AdvertsSubscription extends Mailable
+class AdvertCreated extends Mailable
 {
     use Queueable, SerializesModels;
     public $user;
@@ -21,6 +21,7 @@ class AdvertsSubscription extends Mailable
     {
         $this->user=$user;
         $this->advert=$advert;
+        
     }
 
     /**
@@ -30,6 +31,6 @@ class AdvertsSubscription extends Mailable
      */
     public function build()
     {
-        return $this->from('do-not-reply@carbe.co.uk')->markdown('emails.adverts-subscription');
+        return $this->from('do-not-reply@carbe.co.uk')->markdown('emails.advert-created');
     }
 }

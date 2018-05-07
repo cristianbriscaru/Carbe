@@ -14,7 +14,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            ['advert.create','advert.edit','search.results','search.index','search.create'],
+            ['advert.create','advert.edit','search.results','search.index','search.create','home'],
             function($view){
                 $view->with('makes', \App\Make::pluck('make_name')->forget(117));
             }

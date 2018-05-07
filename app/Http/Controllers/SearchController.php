@@ -37,7 +37,7 @@ class SearchController extends Controller
 
         $request->flash();
         $adverts=$adverts->search();
-        Cookie::queue('saqp', json_encode($request->all()), 1000);
+        Cookie::queue('saqp', json_encode($request->all()), 43200);
         return view('search.results',['adverts'=>$adverts]);
         
     }

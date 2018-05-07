@@ -7,20 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class AdvertsSubscription extends Mailable
+class UserUpdate extends Mailable
 {
     use Queueable, SerializesModels;
-    public $user;
-    public $advert;
+
+       public $user;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($user, $advert)
+    public function __construct($user)
     {
         $this->user=$user;
-        $this->advert=$advert;
+        
     }
 
     /**
@@ -30,6 +30,6 @@ class AdvertsSubscription extends Mailable
      */
     public function build()
     {
-        return $this->from('do-not-reply@carbe.co.uk')->markdown('emails.adverts-subscription');
+        return $this->from('do-not-reply@carbe.co.uk')->markdown('emails.user-update');
     }
 }

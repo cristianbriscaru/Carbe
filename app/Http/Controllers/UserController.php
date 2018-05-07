@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Hash;
+use Mail;
 
 class UserController extends Controller
 {
@@ -57,8 +58,9 @@ class UserController extends Controller
                 'surname.regex' => "Surname invalid format, may contain only letters ,.'-` ",
             ]
         );
-
-        auth()->user()->update($validated);
+        $user=auth()->user();
+        $user->update($validated);
+        Mail::to($user)->send(new \App\Mail\UserUpdate($user));
         $alert=['variant' => 'success' , 'title' => 'User Profile Updated' , 'message' => 'Your Carbe User Profile has been successfuly updated'];
         return redirect('dashboard')->with('alert',$alert);
     }

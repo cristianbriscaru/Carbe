@@ -14,7 +14,7 @@ class SubscriptionRepository
 
     
     public function subscribable($advert){
-       // 
+       
         $subscriptionsQuery= DB::table('searchables')->where('searchable_type','=','App\Subscription')
         ->where( function ($query) use($advert){
             $query->where('min_price','undefined')->orWhere('min_price','<=',$advert->price);
