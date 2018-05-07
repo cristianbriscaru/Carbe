@@ -57,7 +57,6 @@ export default {
     },
     watch:{
         postcode: function(oldPostcode){
-            console.log(oldPostcode , this.postcode);
             setTimeout(()=>{   
                 this.getPostcode(this.postcode);
             },500);
