@@ -4,8 +4,7 @@
             <b-dropdown id="drop-menu" variant="btn btn-outline-primary top-nav" no-caret >
                 <template class="btn btn-outline-primary top-nav" slot="button-content"><i class="material-icons">dehaze</i></template>
                 <b-dropdown-header class="d-none d-md-inline">Quick Links</b-dropdown-header>
-                <b-dropdown-item href="{{route('register')}}"  class=" {{Request::is('register')  ? 'active' : ''}} ">Register</b-dropdown-item>
-                <b-dropdown-item href="{{route('login')}}"  class=" {{Request::is('login')  ? 'active' : ''}} ">Login</b-dropdown-item>
+
                 <b-dropdown-item href="{{route('advert.create')}}"  class=" {{( Request::is('seller/create') || Request::is('car/create') ) ? 'active' : '' }} ">Sell</b-dropdown-item>
                 <b-dropdown-item href="{{route('search.create')}}"  class=" {{( Request::is('search/create') || Request::is('search/results') ) ? 'active' : ''}} ">Buy</b-dropdown-item>
                 <b-dropdown-item href="{{route('dashboard')}}"  class=" {{Request::is('dashboard') ? 'active' : ''}} ">Dashboard</b-dropdown-item>
@@ -16,10 +15,13 @@
                 <b-dropdown-item href="{{route('recent.index')}}"  class=" {{Request::is('recent')  ? 'active' : ''}} ">Recent Cars</b-dropdown-item>
                 <b-dropdown-item href="{{route('search.index')}}"  class=" {{Request::is('search')  ? 'active' : ''}} ">Searches</b-dropdown-item>
                 <b-dropdown-item href="{{route('subscription.index')}}"  class=" {{Request::is('subscription')  ? 'active' : ''}} ">Subscriptions</b-dropdown-item>
+                <b-dropdown-item href="{{route('register')}}"  class=" {{Request::is('register')  ? 'active' : ''}} ">Register</b-dropdown-item>
+                <b-dropdown-item href="{{route('login')}}"  class=" {{Request::is('login')  ? 'active' : ''}} ">Login</b-dropdown-item>
+                <b-dropdown-item href="{{route('user.showchangepassword')}}"  class=" {{Request::is('changepassword')  ? 'active' : ''}} ">Change Password</b-dropdown-item>
                 <b-dropdown-item href="{{route('help')}}"  class=" {{Request::is('help')  ? 'active' : ''}} ">Help</b-dropdown-item>
                 <b-dropdown-item href="{{route('about')}}"  class=" {{Request::is('about')  ? 'active' : ''}} ">About Us</b-dropdown-item>
                 <b-dropdown-item href="{{route('contact.create')}}"  class=" {{Request::is('contact')  ? 'active' : ''}} ">Contact Us</b-dropdown-item>
-                <b-dropdown-item href="{{route('user.showchangepassword')}}"  class=" {{Request::is('changepassword')  ? 'active' : ''}} ">Change Password</b-dropdown-item>
+                
 
             </b-dropdown>
             <head-app v-bind:auth="auth" v-bind:name="name"></head-app>
