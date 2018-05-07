@@ -5,7 +5,7 @@
                                 <div class="col">
                                     <label for="postcode" class="custom-input"><i class="material-icons custom-input">location_on</i>Postcode<span class="text-danger"> *</span></label>           
                                     
-                                        <input id="postcode" type="text" class="form-control custom-input " v-bind:class="{'error' : postcode_error  }" v-model="postcode" name="postcode" placeholder="Postcode :"  required autofocus data-vv-delay="0" v-validate="'required|min:5|max:7|alpha_num|valid_postcode'" >
+                                        <input id="postcode" type="text" class="form-control custom-input " v-bind:class="{'error' : postcode_error  }" v-model="postcode" name="postcode" placeholder="Postcode :"  required autofocus data-vv-delay="0" v-validate="'required|min:5|max:7|alpha_num'" >
                                         <input type="hidden"  v-model="lat" name="lat" v-validate="'required'">
                                         <input type="hidden" v-model="lng" name="lng" v-validate="'required'">
                                 
@@ -59,7 +59,7 @@ export default {
         postcode: function(postcode){
             this.postcode=postcode.toUpperCase();
             setTimeout(()=>{   
-                this.getLocation();
+                this.getPostcode(this.postcode);
             },500);
         },
         lat: function(lat){
@@ -70,43 +70,28 @@ export default {
         'location'
     ],
     methods:{
-        getPostcode (value,type="location"){
+        getPostcode (value){
                 delete window.axios.defaults.headers.common['X-CSRF-TOKEN'];
                 delete window.axios.defaults.headers.common['X-Requested-With'];
-                if(type=="validate"){
-                return axios.get("https://api.postcodes.io/postcodes/" + value + (type=='validate' ? "/validate" : "") ).then(response  =>  {
-                
-                        return {
-                                valid: response.data.result,
-                                data: {message: response.data.result==false ? "Postcode is invalid" : response.data}                        
-                        };
-                    
-                           
-                }) 
-                .catch(error => {
-                    this.$validator.errors.add('postcode','Service unaviable. Try again later','postcode.io');     
-                    return {
-                        valid:false,
-                        data: {message:'Service unaviable. Try again later'}
-                    };    
-                });
-                }
-                else{
+                if(this.fields.postcode.valid && this.prevPostcode!=this.postcode){
+                    this.prevPostcode=this.postcode;
                     axios.get("https://api.postcodes.io/postcodes/" + value).then(response  =>  {
                         this.setLocation(response.data);     
-                    }) 
+                }) 
+                .catch(error => {
+                        if(error.response.data.status == 404){
+                            this.$validator.errors.add('postcode','Invalid Postcode','postcode.io');
+                        }
+                        else{
+                    this.$validator.errors.add('postcode','Service unaviable. Try again later','postcode.io');     
+                        }
+                        
+                        
+                });
                 }
                 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
                 window.axios.defaults.headers.common['X-CSRF-TOKEN']=document.head.querySelector('meta[name="csrf-token"]').content;            
         },
-        getLocation(){    
-                    if(this.fields.postcode.valid && !this.fields.postcode.pending){
-                        if(this.prevPostcode!=this.postcode){
-                            this.getPostcode(this.postcode,"location");
-                            this.prevPostcode=this.postcode;
-                        }
-                    } 
-        },  
         setLocation (location){
                 if(location.status==200){  
                     this.lat=location.result.latitude;
@@ -115,7 +100,6 @@ export default {
                     this.county=location.result.admin_county==null ? location.result.region : location.result.admin_county;
                 }
                 else{
-                    this.$validator.errors.add('postcode','Service unaviable. Try again later','postcode.io');
                     this.lat='';
                     this.lng='';
                     this.town='';
@@ -128,15 +112,6 @@ export default {
     },
 
     created: function(){      
-        const validatePostcode= (value) => {
-            return this.getPostcode(value,"validate"); 
-          
-        }; 
-        this.$validator.extend('valid_postcode', {
-            validate: validatePostcode,
-            getMessage: (field, params, data) => {return data.message;}
-        }); 
-        
         this.emitLocation();
               
     },
