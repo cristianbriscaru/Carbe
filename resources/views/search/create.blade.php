@@ -9,7 +9,7 @@ Search Cars to Buy
             <li class="breadcrumb-item active" aria-current="page">Buy</li>
         </ol>
 </nav>
-    <div class="container">
+    <div class="container mb-5">
         <h2 class="text-info text-center mb-5"> Search New & Used Cars to Buy</h2>
         <search v-bind:poptions="true"></search>
 
