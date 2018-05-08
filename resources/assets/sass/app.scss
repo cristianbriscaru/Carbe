@@ -448,13 +448,13 @@ ul.search-info, ul.search-info li i{
   font-size:0.75rem !important;
 }
 img.share-icon{
-  width:20px;
-  height:20px
+  width:24px;
+  height:24px;
 }
 @include media-breakpoint-up(md) {
   img.share-icon{
     width:36px;
-    height:36px
+    height:36px;
   }
   ul.search-info, ul.search-info li i{
     font-size:1.1rem !important;
