@@ -33,7 +33,7 @@ Car Adverts Search Results
                                             <ul class="list-inline mt-lg-3 text-secondary">
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Mileage" ><img class="search-desc" src="{{ asset('media/app/mileage.png') }}" width="32px" height="32px" alt="Car Dashboard">{{ $advert->mileage }} mi</li>
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Fuel Type"><img  class="search-desc" src="{{ asset('media/app/pump.png') }}" width="32px" height="32px" alt="Petrol Pump">{{ $advert->fuel_type }}</li>
-                                                    <li class="list-inline-item search-desc d-md-none" v-b-tooltip.hover title="Gearbox Type"><img  class="search-desc" src="{{ asset('media/app/gearbox.png') }}" width="32px" height="32px" alt="Car Gearbox">{{ $advert->transmission }}</li>
+                                                    <li class="list-inline-item search-desc" v-b-tooltip.hover title="Gearbox Type"><img  class="search-desc" src="{{ asset('media/app/gearbox.png') }}" width="32px" height="32px" alt="Car Gearbox">{{ $advert->transmission }}</li>
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Fuel Consumption"><img  class="search-desc" src="{{ asset('media/app/CONSUMPTION.png') }}" width="32px" height="32px" alt="Oil Canister">{{ $advert->combined_consumption }} mpg</li>
                                                     
                                             </ul>
