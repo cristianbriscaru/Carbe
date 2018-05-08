@@ -56,7 +56,7 @@
             <div class="form-group row custom-input">
                 <div class="col">
                     <label for="variant" class="custom-input">Variant<span class="text-danger"> *</span></label>
-                    <input id="variant" type="text" class="form-control custom-input" v-bind:class="{'invalid' : errors.has('variant')}" v-model="variant"  name="variant" placeholder="Variant :" v-validate="{required:'true',regex:/^[a-zA-Z-0-9 -]{1,50}$/}" >
+                    <input id="variant" type="text" class="form-control custom-input" v-bind:class="{'invalid' : errors.has('variant')}" v-model="variant"  name="variant" placeholder="Variant :" v-validate="'required'" >
                     <small v-if="errors.has('variant')" class="form-text invalid">{{ errors.first('variant') }}</small>
                 </div>       
                 <div class="col">
@@ -336,7 +336,7 @@
                     <div class="col">
                         <div class="form-check custom-check">
                             <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="11" id="immobiliser">
-                            <label class="form-check-label pl-2 py-2" for="imobiliser">Immobiliser</label>
+                            <label class="form-check-label pl-2 py-2" for="immobiliser">Immobiliser</label>
                         </div>
                     </div> 
                     <div class="col">
@@ -395,7 +395,7 @@
                     </div>       
                     <div class="col">
                         <div class="form-check custom-check">
-                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="20" id="alloy-weels">
+                            <input class="form-check-input mt-2 mt-md-3" type="checkbox" name="features[]" v-model="features" value="20" id="alloy-wheels">
                             <label class="form-check-label pl-2 py-2" for="alloy-wheels">Alloy Wheels</label>
                         </div>
                     </div> 

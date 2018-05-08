@@ -1,4 +1,4 @@
-<footer class="text-center mt-5">
+<footer class="text-center">
     <nav class="pt-3">
         <ul class="footers list-inline">
                 <li class="list-inline-item footers"> <a href="{{route('advert.index')}}"  class=" footers">Adverts </a></li>
