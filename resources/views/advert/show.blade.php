@@ -44,43 +44,43 @@ Car Advert: {{$advert->model->make->make_name." ".$advert->model->model_name." "
                     inline-template>
                 <div>
                     <ul class="list-inline px-5 text-center share-icon ">
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Facebook">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Facebook">
                             <network network="facebook">
                                 <img src="{{asset ('media/app/if_facebook_circle_294710.png') }}" alt="Facebook" class="img-fluid share-icon" height="36" width="36">
                             </network>
                         </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Linkedin">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Linkedin">
                             <network network="linkedin">
                                     <img src="{{asset ('media/app/if_linkedin_circle_294706.png') }}" alt="Linkedin" class="img-fluid share-icon" height="36" width="36">
                             </network>
                         </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Google+">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Google+">
                                 <network network="googleplus">
                                         <img src="{{asset ('media/app/if_google_circle_294707.png') }}" alt="Google Plus" class="img-fluid share-icon" height="36" width="36">
                                 </network>
                             </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Skype">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Skype">
                             <network network="skype">
                                     <img src="{{asset ('media/app/if_skype_287531.png') }}" alt="Skype" class="img-fluid share-icon" height="36" width="36">
                             </network>
                         </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share via SMS">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share via SMS">
                                 <network network="sms">
                                         <img src="{{asset ('media/app/if_imessage_287572.png') }}" alt="Sms" class="img-fluid share-icon" height="36" width="36">
                                 </network>
                             </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Twitter">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Twitter">
                             <network network="twitter">
                                 <img src="{{asset ('media/app/if_twitter_circle_294709.png') }}" alt="Twitter" class="img-fluid share-icon" height="36" width="36">
                             </network>
                         </li>
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Whatsapp">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share on Whatsapp">
                             <network network="whatsapp">
                                     <img src="{{asset ('media/app/if_whatsapp_287520.png') }}" alt="Whatsapp" class="img-fluid share-icon" height="36" width="36">
                             </network>
                         </li>
 
-                        <li class="list-inline-item mx-1 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share via Email">
+                        <li class="list-inline-item mx-1 w-100 btn btn-light bg-white border-0" v-b-tooltip.hover title="Share via Email">
                                 <network network="email">
                                         <img src="{{asset ('media/app/if_mail_287559.png') }}" alt="Email" class="img-fluid share-icon" height="36" width="36">
                                 </network>
