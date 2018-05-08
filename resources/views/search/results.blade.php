@@ -17,14 +17,14 @@ Car Adverts Search Results
         <div class="p-2">
             {{$adverts->appends(request()->input())->links()}} 
                 <div class="row justify-content-center">
-                    <div class="col-12">
+                    <div class="col-12 p-md-0">
                         @if(count($adverts))
                         @foreach($adverts as $advert)
                             <div class="my-5 py-3">
                             <div class="card custom-shadow">
                                 <div class="row ">
-                                    <div class="col-12 col-md-5 ">
-                                        <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid w-100 mx-auto mt-md-3 custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
+                                    <div class="col-12 col-md-5 p-md-0 ">
+                                        <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid w-100 custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
                                     </div>
                                     <div class="col-12 col-md-7 text-center">
                                         <div class="card-block ">
@@ -33,7 +33,7 @@ Car Adverts Search Results
                                             <ul class="list-inline mt-lg-3 text-secondary">
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Mileage" ><img class="search-desc" src="{{ asset('media/app/mileage.png') }}" width="32px" height="32px" alt="Car Dashboard">{{ $advert->mileage }} mi</li>
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Fuel Type"><img  class="search-desc" src="{{ asset('media/app/pump.png') }}" width="32px" height="32px" alt="Petrol Pump">{{ $advert->fuel_type }}</li>
-                                                    <li class="list-inline-item search-desc" v-b-tooltip.hover title="Gearbox Type"><img  class="search-desc" src="{{ asset('media/app/gearbox.png') }}" width="32px" height="32px" alt="Car Gearbox">{{ $advert->transmission }}</li>
+                                                    <li class="list-inline-item search-desc d-md-none" v-b-tooltip.hover title="Gearbox Type"><img  class="search-desc" src="{{ asset('media/app/gearbox.png') }}" width="32px" height="32px" alt="Car Gearbox">{{ $advert->transmission }}</li>
                                                     <li class="list-inline-item search-desc" v-b-tooltip.hover title="Fuel Consumption"><img  class="search-desc" src="{{ asset('media/app/CONSUMPTION.png') }}" width="32px" height="32px" alt="Oil Canister">{{ $advert->combined_consumption }} mpg</li>
                                                     
                                             </ul>
