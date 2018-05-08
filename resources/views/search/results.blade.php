@@ -23,10 +23,10 @@ Car Adverts Search Results
                             <div class="my-5 py-3">
                             <div class="card custom-shadow">
                                 <div class="row ">
-                                    <div class="col-12 col-md-10 col-lg-5">
+                                    <div class="col-12 col-md-5 ">
                                         <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
                                     </div>
-                                    <div class="col-12 col-md-10 col-lg-7 px-3 text-center">
+                                    <div class="col-12 col-md-7 text-center">
                                         <div class="card-block px-6">
                                             <h3 class="p-1 card-title small-h2 text-truncate font-weight-bold"><a href="http://carbe.co.uk/car/{{$advert->id}}" class="text-secondary"><strong class="text-info">£{{$advert->price}}</strong> - {{$advert->make_name." ".$advert->model_name." ".$advert->variant." ".$advert->registration_year}} </a></h3>
                                             
@@ -40,7 +40,7 @@ Car Adverts Search Results
 
                                             <p class="small-font text-light rounded bg-custom p-2 p-lg-4 mt-lg-3 text-justify"><em>{{str_limit($advert->description,150)}}</em></p>
                                             
-                                            <ul class="list-inline w-75 mx-auto share-icon mt-5 mt-lg-2">
+                                            <ul class="list-inline w-75 mx-auto share-icon mt-5 mt-md-3">
                                                 <li class="list-inline-item">
                                                     <a class="btn btn-info px-5" href="http://carbe.co.uk/car/{{$advert->id}}" role="button">   Full Details   </a>
                                                 </li>
