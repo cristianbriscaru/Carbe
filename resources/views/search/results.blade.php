@@ -24,7 +24,7 @@ Car Adverts Search Results
                             <div class="card custom-shadow">
                                 <div class="row ">
                                     <div class="col-12 col-md-5 ">
-                                        <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid w-100 custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
+                                        <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid w-100 mx-auto mt-md-3 custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
                                     </div>
                                     <div class="col-12 col-md-7 text-center">
                                         <div class="card-block ">
