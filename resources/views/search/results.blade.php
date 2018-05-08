@@ -26,7 +26,7 @@ Car Adverts Search Results
                                     <div class="col-12 col-md-6 col-lg-5 ">
                                         <a href="http://carbe.co.uk/car/{{$advert->id}}" ><img class="img-fluid custom-shadow" width="450" height="300" src="http://carbe.co.uk/storage/{{$advert->path}}" alt="Car Vehicle"></a>
                                     </div>
-                                    <div class="col-12 col-lg-6 col-lg-7 text-center">
+                                    <div class="col-12 col-md-6 col-lg-7 text-center">
                                         <div class="card-block">
                                             <h3 class="p-1 card-title small-h2 text-truncate font-weight-bold"><a href="http://carbe.co.uk/car/{{$advert->id}}" class="text-secondary"><strong class="text-info">£{{$advert->price}}</strong> - {{$advert->make_name." ".$advert->model_name." ".$advert->variant." ".$advert->registration_year}} </a></h3>
                                             
