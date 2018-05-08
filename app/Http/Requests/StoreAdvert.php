@@ -50,7 +50,7 @@ class StoreAdvert extends FormRequest
             'make'=> 'required|string|exists:makes,make_name',
             'model'=> 'required|string|exists:models,model_name',
             'photos'=>'required|max:20',
-            'photos.*'=>'mimes:jpeg,png,jpg,gif|max:1250|dimensions:min_width=800,min_height=500',
+            'photos.*'=>'mimes:jpeg,png,jpg,gif|max:4000|dimensions:min_width=800,min_height=500',
             'features.*'=>'numeric|min:1|max:27',
             'mot'=>'json'
         ];
