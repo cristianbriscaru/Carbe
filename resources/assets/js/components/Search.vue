@@ -3,19 +3,19 @@
              
             <form novalidate @submit.prevent="validateForm" method="GET" action="http://carbe.co.uk/search/results">
                 <div class="row search">
-                        <div class="col-4 col-sm-4 col-md-2 px-2 small-i">
+                        <div class="col-4 col-md-2 small-i custom-label">
                             <post-code :location="false" v-on:postcode="postcodes"></post-code>
                         </div>
-                        <div class="col-8 col-sm-8 col-md-4 px-1">
+                        <div class="col-8 col-sm-8 col-md-4 px-1 custom-label">
                             
                             <make-model :pmake="make" :pmodel="model" any-other="Any" v-on:makeModel="makeModel"></make-model>
                             
                         </div>
-                        <div class=" col-12 col-sm-12 col-md-6 px-1 justify-center">
+                        <div class=" col-12 col-md-6 justify-content-center">
                             <div class="pl-2">
-                                <label for="euro" class="custom-input w-30 d-inline-block">Distance</label>
-                                <label for="euro" class="custom-input w-30 d-inline-block">Min Price</label>
-                                <label for="euro" class="custom-input w-30 d-inline-block">Max Price</label>
+                                <label for="euro" class="custom-input custom-label w-30 d-inline-block">Distance</label>
+                                <label for="euro" class="custom-input custom-label w-30 d-inline-block">Min Price</label>
+                                <label for="euro" class="custom-input custom-label w-30 d-inline-block">Max Price</label>
 
                                 <select class="custom-select custom-input w-30 d-inline-block radius-left search-select border-right" v-bind:class="{'invalid' : errors.has('distance')}"  name="distance" v-model="distance" >
                                     <option selected hidden value="undefined">Distance :</option>
@@ -102,10 +102,12 @@
                             </div>
                         </div>
                 </div>
+                
                 <b-collapse id="options" v-bind:visible="poptions">
-                    <div class="row my-5">
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('state')}" id="state" v-model="state" name="state" >
+                    <div class="row my-4">
+                        <div class="col-4 col-md-2">
+                            <label for="state" class="custom-input custom-label">State</label>
+                            <select id="state" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('state')}" id="state" v-model="state" name="state" >
                                 <option selected hidden value="undefined">State :</option>
                                 <option value="ANY">Any</option>
                                 <option value="USED">Used</option>
@@ -113,8 +115,9 @@
                                 <option value="NEARLYNEW">Nearly New</option>
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('age')}" v-model="age" name="age" >
+                        <div class="col-4 col-md-2">
+                            <label for="age" class="custom-input custom-label">Age</label>
+                            <select id="age" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('age')}" v-model="age" name="age" >
                                 <option selected hidden value="undefined">Age :</option>
                                 <option value="150">Any</option>
                                 <option value="1">up to 1 year</option>
@@ -131,8 +134,9 @@
                                 <option value="20">up to 20 years</option>
                             </select>                            
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('service')}" id="service" v-model="service" name="service" >
+                        <div class="col-4 col-md-2">
+                            <label for="service" class="custom-input custom-label">Service</label>
+                            <select id="service" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('service')}" id="service" v-model="service" name="service" >
                                 <option selected hidden value="undefined">Service :</option>
                                 <option value="ANY">Any</option>
                                 <option value="FULL">Full history</option>
@@ -140,8 +144,9 @@
                                 <option value="NONE">No history</option>                     
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('mileage')}" id="mileage" v-model="mileage" name="mileage" >
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="mileage" class="custom-input custom-label">Mileage</label>
+                            <select id="mileage" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('mileage')}" id="mileage" v-model="mileage" name="mileage" >
                                 <option selected hidden value="undefined">Mileage :</option>    
                                 <option value="5000000">Any</option>
                                 <option value="0">Up to 0 miles</option>
@@ -167,8 +172,9 @@
                                 <option value="200000">Up to 200,000 miles</option>
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('fuel_type')}" id="fuel_type" v-model="fuel_type" name="fuel_type" >
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="fuel" class="custom-input custom-label">Fuel Type</label>
+                            <select id="fuel" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('fuel_type')}" id="fuel_type" v-model="fuel_type" name="fuel_type" >
                                 <option selected hidden value="undefined">Fuel Type :</option>
                                 <option value="ANY">Any</option> 
                                 <option value="PETROL">Petrol</option>
@@ -179,8 +185,9 @@
                                                        
                             </select> 
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('transmission')}" id="transmission" v-model="transmission" name="transmission" >
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="gearbox" class="custom-input custom-label">Gearbox</label>
+                            <select id="gearbox" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('transmission')}" id="transmission" v-model="transmission" name="transmission" >
                                 <option selected hidden value="undefined">Gearbox :</option>
                                 <option value="ANY">Any</option>
                                 <option value="MANUAL">Manual</option>
@@ -191,9 +198,10 @@
                             </select>
                         </div>                                                                                                    
                     </div>
-                    <div class="row my-5">
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('body')}" id="body" v-model="body" name="body" >
+                    <div class="row my-4">
+                        <div class="col-4 col-md-2">
+                            <label for="body" class="custom-input custom-label">Body</label>
+                            <select id="body" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('body')}" id="body" v-model="body" name="body" >
                                 <option selected hidden value="undefined">Body :</option>
                                 <option value="ANY">Any</option>
                                 <option value="SALOON">Saloon</option>
@@ -208,8 +216,9 @@
                             </select>                             
 
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('doors')}" id="doors" v-model="doors" name="doors" >
+                        <div class="col-4 col-md-2">
+                            <label for="doors" class="custom-input custom-label">Doors</label>
+                            <select id="doors" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('doors')}" id="doors" v-model="doors" name="doors" >
                                 <option selected hidden value="undefined">Doors :</option>
                                 <option value="10">Any</option>
                                 <option value="2">2</option>
@@ -218,8 +227,9 @@
                                 <option value="5">5</option>                      
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('consumption')}"  v-model="consumption" name="consumption" >
+                        <div class="col-4 col-md-2">
+                            <label for="consumption" class="custom-input custom-label">Consumption</label>
+                            <select id="consumption" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('consumption')}"  v-model="consumption" name="consumption" >
                                 <option selected hidden value="undefined">Consumption :</option>
                                 <option value="1000">Any</option>
                                 <option value="25">Over 25 mpg</option>
@@ -228,17 +238,19 @@
                                 <option value="100">Over 100 mpg</option>                    
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('seller_type')}" v-model="seller_type" name="seller_type" >
-                                    <option selected hidden value="undefined">Seller :</option>
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="seller" class="custom-input custom-label">Seller</label>
+                            <select id="seller" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('seller_type')}" v-model="seller_type" name="seller_type" >
+                                <option selected hidden value="undefined">Seller :</option>
                                 <option value="any">Any</option>
                                 <option value="private">Private</option>
                                 <option value="trader">Trader</option>
                                 
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('engine_size')}" v-model="engine_size"  name="engine_size" >
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="engine" class="custom-input custom-label">Engine</label>
+                            <select id="engine" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('engine_size')}" v-model="engine_size"  name="engine_size" >
                                 <option selected hidden value="undefined">Engine :</option>
                                 <option value="20000">Any</option>
                                 <option value="1000">Up to 1.0 L</option>
@@ -249,8 +261,9 @@
                                 <option value="3000">Up to 3.0 L</option>
                             </select>
                         </div>
-                        <div class="col-4 col-md-2 col-lg-2 col-xl-2 pt-5 pt-md-0">
-                            <select class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('colour')}" id="colour" v-model="colour" name="colour" >
+                        <div class="col-4 col-md-2 pt-4 pt-md-0">
+                            <label for="colour" class="custom-input custom-label">Colour</label>
+                            <select id="colour" class="custom-select custom-input" v-bind:class="{'invalid' : errors.has('colour')}" id="colour" v-model="colour" name="colour" >
                                     <option selected hidden value="undefined">Colour :</option>
                                     <option value="ANY">Any</option>
                                     <option value="BEIGE">Beige</option>
@@ -279,9 +292,10 @@
                             </select> 
                         </div>                                                                                                    
                     </div>    
-                    <div class="row my-5">
+                    <div class="row my-4">
                         <div class="col text-center">
-                                <select class="custom-select custom-input " v-bind:class="{'invalid' : errors.has('sortby')}" v-model="sortby"  name="sortby" >
+                            <label for="sort" class="custom-input custom-label">Sort by</label>
+                                <select id="sort" class="custom-select custom-input " v-bind:class="{'invalid' : errors.has('sortby')}" v-model="sortby"  name="sortby" >
                                     <option selected hidden value="undefined">Sort By :</option>
                                     <option value="HIGHESTPRICE">Heigheist Price</option>
                                     <option value="LOWESTPRICE">Lowest Price</option>
@@ -294,7 +308,7 @@
                         </div>
                     </div>                                    
                 </b-collapse>
-                
+               
 
 
 

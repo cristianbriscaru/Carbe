@@ -599,5 +599,7 @@ div.fixed-top-app{
   max-width:none!important;
   background:none!important
 }
-
+label.custom-input.custom-label , .custom-label label.custom-input{
+  color:#cacaca !important;
+}
 [v-cloak] {display: none}
