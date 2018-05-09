@@ -76,6 +76,6 @@ Car Adverts Search Results
         window.old=@json(old());
         window.errors=@json($errors->toArray());
         window.makes=@json($makes);
-        console.log(window.old);
+        
     </script>
 @endpush
