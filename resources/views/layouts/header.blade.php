@@ -26,17 +26,6 @@
             </b-dropdown>
             <head-app v-bind:auth="auth" v-bind:name="name"></head-app>
         </div>
-        <b-collapse id="top-app" class="text-secondary custom-shadow">
-            <div class="">
-                <div class="card mt-0 pb-2 px-2 custom-shadow" >
-                    
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </b-collapse>
-
     </div>
     <div class="menu  custom-shadow">
         <div class="nav-logo">
