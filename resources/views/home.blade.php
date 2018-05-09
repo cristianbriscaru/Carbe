@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('title')
+Car Network
+@endsection
 @section('content')
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-white">
