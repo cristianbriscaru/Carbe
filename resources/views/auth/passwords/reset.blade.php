@@ -43,7 +43,7 @@ Reset password
                         </div>    
                         <div class="col">
                             <label for="password-confirm" class="custom-input"><i class="material-icons md-48 custom-input">lock</i>Confirm Password <span class="text-danger"> *</span></label>
-                            <input id="password-confirm" type="password" class="form-control custom-input " placeholder="Re-Enter Password here :" name="password-confirmation" required data-vv-name="passwordconfirmation" data-vv-validate-on="input" v-validate="'required|min:6|max:255|confirmed:password'" >
+                            <input id="password-confirm" type="password" class="form-control custom-input " placeholder="Re-Enter Password here :" name="password_confirmation" required data-vv-name="passwordconfirmation" data-vv-validate-on="input" v-validate="'required|min:6|max:255|confirmed:password'" >
                             @if ($errors->has('password'))
                             <small v-if="(fields.passwordconfirmation && fields.passwordconfirmation.pristine)"  class="form-text custom-input invalid">
                                 {{ $errors->first('password') }}
