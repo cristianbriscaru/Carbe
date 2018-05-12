@@ -24,7 +24,7 @@ class RecentController extends Controller
 
         $recents=auth()->user()->recents()->join('adverts','recents.advert_id','adverts.id')->join('models','adverts.model_id','models.id')
         ->join('makes','models.make_id','makes.id')->join('avatars','adverts.id','avatars.advert_id')
-        ->select('adverts.id as advert_id','adverts.price','adverts.registration_year','adverts.mileage','adverts.fuel_type','adverts.combined_consumption','adverts.transmission','avatars.path','models.model_name', 'makes.make_name')->get();
+        ->select('adverts.id as advert_id','adverts.price','recents.created_at','adverts.registration_year','adverts.mileage','adverts.fuel_type','adverts.combined_consumption','adverts.transmission','avatars.path','models.model_name', 'makes.make_name')->get();
   
         if($request->ajax()){
             return $recents;

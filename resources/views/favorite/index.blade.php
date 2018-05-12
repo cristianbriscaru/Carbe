@@ -26,7 +26,7 @@ Favorite Car Adverts
                                             <div class="col-12 col-md-8 col-lg-9 p-0 pt-3 pt-md-0 pt-lg-3 text-center">
                                                 <div class="card-block p-0">
                                                     <h3 class="pt-1  card-title small-h2 text-truncate text-uppercase font-weight-bold"><a href="{{route('advert.show',['advert' => $favorite->advert_id]) }}" class="text-light"><strong>£ {{$favorite->price}}</strong>  {{$favorite->make_name." ".$favorite->model_name." ".$favorite->registration_year}} </a></h3>
-                                                    <p class="text-italic">Saved on : {{ \Carbon\Carbon::createFromTimeStamp(strtotime($favorite->created_at))->toFormattedDateString() }}</p>
+                                                    <p class="text-italic">Saved on : {{ Carbon\Carbon::createFromTimeStamp(strtotime($favorite->created_at))->toFormattedDateString() }}</p>
                                                     <ul class="share-icon text-light pb-3 small-font">                                                         
                                                             <li class="ml-5" v-b-tooltip.hover title="Mileage" ><img class="search-desc" src="{{ asset('/media/app/mileage.png')  }}" width="32px" height="32px" alt="Car Dashboard">{{ $favorite->mileage }} mi</li>
                                                             <li class="mx-1" v-b-tooltip.hover title="Fuel Type"><img  class="search-desc" src="{{ asset('/media/app/pump.png')  }}" width="32px" height="32px" alt="Petrol Pump">{{ $favorite->fuel_type }}</li>
