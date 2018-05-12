@@ -20,7 +20,7 @@ Subscriptions
                         $id=array_pull($subscription,'id');
                         $subscription['subscribed']=  \Carbon\Carbon::createFromTimeStamp(strtotime($subscription['subscribed']))->toDateString();
                     @endphp
-                    <div class="custom-shadow my-5">
+                    <div class="custom-shadow mb-5">
                     <div class="table-responsive">
                         <table class="table table-sm bg-custom rounded">
                             <tbody>
