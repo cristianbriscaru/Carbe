@@ -12,7 +12,7 @@ Subscriptions
 </nav>
     <h2 class="text-center text-info heading mb-5">Subscriptions</h2> 
     <div class="row justify-content-center text-center">
-        <div class="col-11 col-md-11 col-lg-10  bg-secondary text-light rounded px-5">
+        <div class="col-11 col-md-11 col-lg-10  text-light rounded px-5">
             @if(count($subscriptions))
                 @foreach($subscriptions as $subscription)
                     @php
@@ -30,7 +30,7 @@ Subscriptions
                                 </tr>
                                <tr>
                                 @endif
-                                <td class="">  {{ucfirst(str_replace("_"," ",$key)).": ".($atribute == 'undefined' ? 'Any' : ucfirst(strtolower($atribute))) }} </td>
+                                <td class="">  {{ucfirst(str_replace("_"," ",$key)).": ".($atribute == 'undefined' || $atribute == 'OTHER'  ? 'Any' : ucfirst(strtolower($atribute))) }} </td>
 
                             @endforeach
                                 </tr>

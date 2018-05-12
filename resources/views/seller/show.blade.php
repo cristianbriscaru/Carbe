@@ -12,8 +12,8 @@ Seller Profile
 </nav>
 <h2 class="text-center text-info mb-5">Seller Profile</h2> 
 
-<div class="row w-75 mx-auto bg-secondary rounded text-light text-center justify-content-center mb-5">
-    <div class="col-12 col-md-8 py-5">
+<div class="row text-light text-center justify-content-center mb-5">
+    <div class="col-10 col-md-8 py-5">
     <ul class="list-group mb-5 mt-3">
         <li class="list-group-item bg-custom my-2">{{$seller->county." , ".$seller->town." , ".$seller->postcode}}</li>
         <li class="list-group-item bg-custom my-2">{{$seller->telephone}}</li>

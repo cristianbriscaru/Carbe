@@ -11,8 +11,8 @@ User Profile
         </ol>
 </nav>
     <h2 class="text-center text-info mb-5">User Profile</h2> 
-    <div class="row w-75 mx-auto bg-secondary rounded text-light text-center justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 py-5">
+    <div class="row  rounded text-light text-center justify-content-center">
+        <div class="col-10 col-md-8 py-5">
         <ul class="list-group mb-5 mt-3">
             <li class="list-group-item bg-custom my-2">{{$user->name}}</li>
             <li class="list-group-item bg-custom my-2">{{$user->surname}}</li>

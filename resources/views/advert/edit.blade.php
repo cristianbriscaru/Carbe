@@ -3,7 +3,7 @@
 Edit Car Advert
 @endsection
 @section('content')
-<nav aria-label="breadcrumb" class="float-left ">
+<nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>

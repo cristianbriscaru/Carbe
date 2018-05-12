@@ -3,7 +3,7 @@
 Published Car Adverts
 @endsection
 @section('resources')
-<nav aria-label="breadcrumb" class="float-left ">
+<nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
             <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
@@ -11,9 +11,9 @@ Published Car Adverts
             
         </ol>
 </nav>
-    <h2 class="text-center text-info heading my-md-5">Published Car Adverts</h2> 
-    <div class="row justify-content-center text-center">
-        <div class="col-12 col-md-12 col-lg-10  bg-secondary rounded px-5 text-light">
+    <h2 class="text-center text-info">Published Car Adverts</h2> 
+    <div class="row justify-content-center text-light text-center">
+        <div class="col-12 col-md-12 col-lg-10  rounded px-5">
             @if(count($adverts))
                 @foreach($adverts as $advert)
 

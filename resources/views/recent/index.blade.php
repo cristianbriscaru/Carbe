@@ -12,7 +12,7 @@ Recent Car Adverts
 </nav>
     <h2 class="text-center text-info heading mb-5">Recent Viewed Car Adverts</h2> 
     <div class="row justify-content-center text-center">
-        <div class="col-12 col-md-11 col-lg-10  bg-secondary rounded p-5 text-light">
+        <div class="col-12 col-md-11 col-lg-10  p-5 text-light">
             @if(count($recents))
                 @foreach($recents as $recent)
 
