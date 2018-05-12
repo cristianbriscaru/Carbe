@@ -1,10 +1,10 @@
 <template>
-    <li class="list-inline-item mx-1 save-favorite " id="favorite">
-        <span @click="saveFavorite" class="btn btn-light text-secondary bg-white border-0">
+    <li class="list-inline-item mx-1 save-favorite">
+        <span @click="saveFavorite" class="btn btn-light text-secondary bg-white border-0" v-b-tooltip.hover title="Save to Favorites">
         <img :src="src" alt="Favorite" class="img-fluid share-icon" height="36" width="36"> 
         Favorite+ 
         </span>
-        <b-tooltip target="favorite" title="Save to Favorites"></b-tooltip>
+        
         <span>
         <b-modal v-model="showAlert" id="modal"
             size="md"
