@@ -3,7 +3,8 @@ export default {
         validateForm(e) {
             this.$validator.validateAll().then((result) => {
                 if (result) {
-                    e.srcElement.submit();
+                    var form = e.target || e.srcElement;
+                    form.submit();
                 } 
             });
         },      
