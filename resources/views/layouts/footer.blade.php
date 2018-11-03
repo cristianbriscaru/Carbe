@@ -34,5 +34,4 @@
             </a>
         </li> 
     </ul> 
-    <p>Developed by Cristian & Andreea @Briscaru </p>
 </footer>
