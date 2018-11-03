@@ -30,8 +30,8 @@ About Carbe
                 <div class="col-12 col-md-6">
                     <h4 class="small-h2 text-secondary"> Contact Details</h4>
                     <ul class="list-group text-light bg-light rounded">
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">call</i>02075114178</li>
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">call_end</i>0746238112</li>
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">call</i>02075224178</li>
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">call_end</i>074534622312</li>
                         <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">drafts</i>contact@carbe.co.uk</li>
                         <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">email</i>suport@carbe.co.uk</li>                        
                     </ul>
@@ -39,10 +39,10 @@ About Carbe
                 <div class="col-12 col-md-6">
                     <h4 class="small-h2 text-secondary"> Address Details</h4>
                     <ul class="list-group text-light bg-light rounded pb-4">
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">person_pin</i>Brunel House</li>
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">person_pin_circle</i>340 Firecrest Court</li>
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">pin_drop</i>Warrington</li>
-                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">place</i>Cheshire WA1 1RG</li>                        
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">person_pin</i>Arond House</li>
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">person_pin_circle</i>6 Devonshire Square</li>
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">pin_drop</i>London</li>
+                        <li class="list-group-item my-2 bg-custom"><i class="material-icons mr-3">place</i>EC2M 4YE</li>                        
                     </ul>
                 </div>
             </div>
